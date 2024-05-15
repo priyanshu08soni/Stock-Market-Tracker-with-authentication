@@ -13,7 +13,7 @@ const cors=require("cors");
 dbConnect();
 app.use(morgan("dev"));
 app.use(cors({
-    origin:["https://stock-market-tracker-frontend.vercel.app/login"],
+    origin:["https://stock-market-tracker-frontend.vercel.app"],
     methods:["POST","GET","PUT"],
     credentials:true
 }));
