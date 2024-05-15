@@ -1,1 +1,1 @@
-export const base_url="http://localhost:5000/api/user/"
+export const base_url="https://stock-market-tracker-834.vercel.app/"
