@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-app.use('api/user',authRouter);
+app.use('/',authRouter);
 //after the authentication
 
 app.use(notFound);
