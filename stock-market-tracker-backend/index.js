@@ -14,7 +14,7 @@ dbConnect();
 app.use(morgan("dev"));
 app.use(cors({
     origin:["https://stock-market-tracker-frontend.vercel.app"],
-    methods:["POST","GET","PUT"],
+    methods:["POST","GET"],
     credentials:true
 }));
 //generating response to request
