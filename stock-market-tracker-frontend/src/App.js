@@ -4,8 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import ThemeContext from "./context/ThemeContext";
 import StockContext from "./context/StockContext";
-import { OpenRoute } from "./route/OpenRoute";
-import { PrivateRoute } from "./route/PrivateRoute";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 function App() {
