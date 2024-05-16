@@ -98,15 +98,8 @@ Client-side | Server-side
    
 # Screenshots of this project
 
-User visit public and Home page
-![User visit public and Home page](http://i.imgur.com/ORCGHHY.png)
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/r90AEM8"  ><a href="//imgur.com/a/r90AEM8">MY-website</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
-User can sign in or sign up
-![User can sign in or sign up](http://i.imgur.com/rrmbU5I.png)
-
-After signing in user can go to account route and make request to token-protected API endpoint
-![After signing in user can go to account route](http://i.imgur.com/FzLB51u.png)
+User visit public , Home page , SignUp Page, Login Page
+![User visit public and Home page](https://imgur.com/a/website-r90AEM8)
 
 ## Standard
 
