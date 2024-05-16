@@ -7,7 +7,7 @@ import ThemeContext from "../context/ThemeContext";
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/stock-api";
 import {  useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 import WatchList from "./WatchList";
 import { getWatchList } from "../features/watchlist/watchListSlice";
 
@@ -23,39 +23,42 @@ const Home = () => {
   };
   const { darkMode } = useContext(ThemeContext);
   const dispatch=useDispatch();
-  const navigate=useNavigate();
+  
   const { stockSymbol } = useContext(StockContext);
   const [stockDetails, setStockDetails] = useState({});
   const [quote, setQuote] = useState({});
   const authState = useSelector((state) => state?.auth?.user);
   
   useEffect(() => {
-
-    if(authState===null){
-      navigate("/login");
+    if(authState!==null){
+      const updateStockDetails = async () => {
+        try {
+          const result = await fetchStockDetails(stockSymbol);
+          setStockDetails(result);
+        } catch (error) {
+          setStockDetails({});
+        }
+      };
+      const updateStockOverview = async () => {
+        try {
+          const result = await fetchQuote(stockSymbol);
+          setQuote(result);
+        } catch (error) {
+          setQuote({});
+          console.log(error);
+        }
+      };
+      updateStockDetails();
+      updateStockOverview();
+    }else{
+      setStockDetails({});
+      setQuote({})
     }
-    const updateStockDetails = async () => {
-      try {
-        const result = await fetchStockDetails(stockSymbol);
-        setStockDetails(result);
-      } catch (error) {
-        setStockDetails({});
-      }
-    };
-    const updateStockOverview = async () => {
-      try {
-        const result = await fetchQuote(stockSymbol);
-        setQuote(result);
-      } catch (error) {
-        setQuote({});
-        console.log(error);
-      }
-    };
-    updateStockDetails();
-    updateStockOverview();
   }, [stockSymbol]);
   useEffect(()=>{
-    dispatch(getWatchList(config2));
+    if(authState!==null){
+      dispatch(getWatchList(config2));
+    }
   },[authState]);
   return (
     <div

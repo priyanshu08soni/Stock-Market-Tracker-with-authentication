@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import ThemeContext from '../context/ThemeContext'
 import StockContext from '../context/StockContext';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addToWatchList } from '../features/watchlist/watchListSlice';
+import { useNavigate } from "react-router-dom";
 const SearchResult = ({results}) => {
   const getTokenFromLocalStorage=localStorage.getItem("user")
   ? JSON.parse(localStorage.getItem("user")):null;
@@ -13,11 +14,17 @@ const SearchResult = ({results}) => {
     Accept:"application/json"
   };
   const {darkMode} =useContext(ThemeContext);
+  const authState = useSelector((state) => state?.auth?.user);
   const dispatch=useDispatch();
+  const navigate=useNavigate();
   const {setStockSymbol} =useContext(StockContext);
   const handleWatchList=(title)=>{
-    const data={config2:config2,title:title};
-    dispatch(addToWatchList(data));
+    if(authState===null){
+      navigate("/login");
+    }else{
+      const data={config2:config2,title:title};
+      dispatch(addToWatchList(data));
+    }
   }
   return (
     <ul className={`absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll overflow-hidden  ${darkMode?"bg-gray-900 border-gray-800 custom-scrollbar custom-scrollbar-dark":"bg-white border-neutral-200 custom-scrollbar"}`} >
