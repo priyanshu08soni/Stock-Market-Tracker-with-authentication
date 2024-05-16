@@ -12,7 +12,14 @@ const morgan=require("morgan");
 const cors=require("cors");
 dbConnect();
 app.use(morgan("dev"));
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "https://stock-market-tracker-frontend.vercel.app");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+  })
 app.use(cors({
+    
     origin:["https://stock-market-tracker-frontend.vercel.app"],
     methods:["POST","GET"],
     credentials:true
