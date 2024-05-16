@@ -99,7 +99,7 @@ Client-side | Server-side
 # Screenshots of this project
 
 User visit public , Home page , SignUp Page, Login Page
-![User visit public and Home page](https://imgur.com/a/website-r90AEM8)
+- [User visit public and Home page](https://imgur.com/a/website-r90AEM8)
 
 ## Standard
 
