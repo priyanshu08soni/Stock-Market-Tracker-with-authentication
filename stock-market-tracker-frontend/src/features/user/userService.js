@@ -8,7 +8,7 @@ const register=async(userData)=>{
     }
 }
 const login=async(userData)=>{
-    const response=await axios.post(`${base_url}/login`,userData);
+    const response=await axios.post("https://stock-market-tracker-backend.vercel.app/login",userData);
     if(response?.data){
         localStorage.setItem('user',JSON.stringify(response?.data));
     }
