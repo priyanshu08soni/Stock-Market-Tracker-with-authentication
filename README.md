@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">
 🌐 MERN Stack
 </h1>
@@ -152,3 +153,9 @@ I recently launch my monthly mentorship program, feel free to reach out and see 
 
 ### License
 [MIT](https://github.com/amazingandyyy/mern/blob/master/LICENSE)
+=======
+#Stock Market Tracker with MERN Stack
+
+##This is a full-stack application built using the MERN stack (MongoDB, Express.js, React, and Node.js) to track stock market data and visualize it for informed investment decisions.
+
+>>>>>>> f4bc35c394384ec060561821e68fd44f14ba444b
