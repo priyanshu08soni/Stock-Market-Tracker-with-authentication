@@ -49,20 +49,19 @@ $ npm run build // this will compile the react code using webpack and generate a
 
 run the script at the first level:
 
-(You need to add a JWT_SECRET in .env to connect to MongoDB)
+(You need to add a JWT_SECRET, MONGODB_URL , PORT in .env to connect to MongoDB)
 
-```terminal
+```
 // in the root level
-$ cd server
-$ echo "JWT_SECRET=YOUR_JWT_SECRET" >> src/.env
+$ cd stock-market-tracker-backend
 ```
 
 ### Start
 
 ```terminal
-$ cd server   // go to server folder
+$ cd stock-market-tracker-backend  // go to server folder
 $ npm i       // npm install packages
-$ npm run dev // run it locally
+$ npm run server // run it locally
 $ npm run build // this will build the server code to es5 js codes and generate a dist file
 ```
 
