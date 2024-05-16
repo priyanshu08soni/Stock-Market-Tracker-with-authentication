@@ -8,7 +8,7 @@ const register=async(userData)=>{
     }
 }
 const login=async(userData)=>{
-    const response=await axios.post("/login",userData);
+    const response=await axios.post(`${base_url}/login`,userData);
     if(response?.data){
         localStorage.setItem('user',JSON.stringify(response?.data));
     }
