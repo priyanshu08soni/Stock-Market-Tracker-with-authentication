@@ -50,7 +50,7 @@ export const watchListSlice=createSlice({
             state.isSuccess=false;
             state.message=action.error;
             if(state.isError===true){
-                toast.error(action.payload.response.data.message);
+                toast.error(action.payload);
             }
         })
         .addCase(getWatchList.pending,(state)=>{
@@ -71,7 +71,7 @@ export const watchListSlice=createSlice({
             state.isSuccess=false;
             state.message=action.error;
             if(state.isError===true){
-                toast.error(action.payload.response.data.message);
+                toast.error(action.payload);
             }
         })
         
