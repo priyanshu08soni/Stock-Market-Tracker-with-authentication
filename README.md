@@ -14,7 +14,6 @@ $ npm i
 
 ## project structure
 ```terminal
-LICENSE
 package.json
 backend/
    package.json
