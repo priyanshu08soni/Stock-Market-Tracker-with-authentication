@@ -100,6 +100,7 @@ Client-side | Server-side
 
 User visit public and Home page
 ![User visit public and Home page](http://i.imgur.com/ORCGHHY.png)
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/r90AEM8"  ><a href="//imgur.com/a/r90AEM8">MY-website</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 User can sign in or sign up
 ![User can sign in or sign up](http://i.imgur.com/rrmbU5I.png)
