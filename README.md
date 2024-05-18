@@ -64,6 +64,23 @@ $ npm run server // run it locally
 $ npm run build // this will build the server code to es5 js codes and generate a dist file
 ```
 
+
+## Deploy Server to [Vercel](https://vercel.com/)
+### Deploying Server on Vercel
+#### 1. Go to Vercel make a account by linking it with Github.
+#### 2. Import the Stock-market-repository.
+#### 3. Press the Import button then import your Backend.
+#### 4. Then press deploy.
+#### 5. After deploying you will get the link of your Backend. 
+#### update the url of [stock-market-tracker-Backend/index.js][Cors url]
+#### from your deployed url.
+
+### Deploying Frontend on vercel
+#### Do the same as above and update the url of [stock-market-tracker-frontend/src/utils/base_url.js]
+#### from your deployed url.
+
+### Now you can access your Deployed project by the deployed frontend Link.
+
 # Dependencies(tech-stacks)
 Client-side | Server-side
 --- | ---
