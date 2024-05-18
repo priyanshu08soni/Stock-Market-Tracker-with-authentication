@@ -65,7 +65,7 @@ $ npm run build // this will build the server code to es5 js codes and generate 
 ```
 
 
-## Deploy Server to [Vercel](https://vercel.com/)
+## Deploy App to [Vercel](https://vercel.com/)
 ### Deploying Server on Vercel
 #### 1. Go to Vercel make a account by linking it with Github.
 #### 2. Import the Stock-market-repository.
