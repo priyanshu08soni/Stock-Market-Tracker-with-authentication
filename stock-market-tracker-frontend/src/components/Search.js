@@ -25,12 +25,12 @@ const Search = () => {
   };
   return (
     <div
-      className={`flex align-items-center my-2 border-2 rounded-md relative z-50 w-96 ${
+      className={`flex align-items-center my-2 border-3 rounded-md relative z-50 w-96 ${
         darkMode
           ? "bg-gray-900 border-gray-800"
-          : " bg-white border-neutral-200"
+          : " bg-white border-blue-100"
       }`}
-      style={{ border: "1px solid lightgray" }}
+      style={{height:"50px",width:"35vw"}}
     >
       <input
         type="text"

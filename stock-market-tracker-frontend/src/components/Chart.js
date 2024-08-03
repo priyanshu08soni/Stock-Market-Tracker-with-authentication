@@ -54,7 +54,7 @@ const Chart = () => {
   
   return (
     <>
-      <div className={`w-full h-full rounded-md relative p-8 my-2 border-2  ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-neutral-200"}`}>
+      <div className={`w-full h-full rounded-md relative p-8 ${darkMode?"bg-gray-900":"bg-blue"}`}>
         <ul className="flex absolute top-2 right-2 z-40" >
             {Object.keys(chartConfig).map((item)=>{
                 return <li key={item}>

@@ -62,7 +62,7 @@ const Home = () => {
   },[authState,config2]);
   return (
     <div
-      className={`h-screen grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-6 p-10 font-roboto ${
+      className={`h-screen grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-6 px-10 pb-10 font-roboto ${
         darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-100"
       } `}
     >
