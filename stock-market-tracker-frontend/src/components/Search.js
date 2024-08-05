@@ -25,17 +25,17 @@ const Search = () => {
   };
   return (
     <div
-      className={`flex align-items-center my-2 border-3 rounded-md relative z-50 w-96 ${
+      className={`flex align-items-center my-2 rounded-md relative z-50 ${
         darkMode
           ? "bg-gray-900 border-gray-800"
           : " bg-white border-blue-100"
       }`}
-      style={{height:"10px",width:"69vh"}}
+      style={{height:"10px",width:"32.8%"}}
     >
       <input
         type="text"
         value={input}
-        className={`w-full px-4 py-2 focus:outline-none rounded-md ${
+        className={`w-full px-4 py-2 focus:outline-none rounded-md shadow-md ${
           darkMode ? "bg-gray-700" : null
         }`}
         placeholder="Search stock ... and press enter"

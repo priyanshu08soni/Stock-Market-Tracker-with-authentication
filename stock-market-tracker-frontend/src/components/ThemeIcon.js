@@ -12,12 +12,13 @@ const ThemeIcon = () => {
    const firstLetter = authState?.firstname.charAt(0).toUpperCase();
   return (
     <>
-    <button className={`d-flex gap-3 rounded-lg border-3 border-blue
+    <button className={`d-flex gap-3 rounded-lg border-2
     mt-3 p-2 absolute top-0 right-10  shadow-lg ${darkMode? "shadow-gray-600" :null}`} 
     onClick={toggleDarkMode}
     >
       <MoonIcon className={`h-6 w-6 cursor-pointer stroke-1 fill-none ${darkMode? "fill-yellow-400 stroke-yellow-400":"fill-none stroke-neutral-500 "}`} />
-      <p className='text-xl' style={{marginTop:"-2px"}}>{firstLetter}</p>
+      <div className='border-1' style={{height:"25px"}}></div>
+      <p className='text-xl' style={{marginTop:"-2px",marginRight:"3px"}}>{firstLetter}</p>
     </button>
     </>
   )

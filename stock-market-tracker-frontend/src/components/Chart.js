@@ -54,8 +54,8 @@ const Chart = () => {
   
   return (
     <>
-      <div className={`w-full h-full rounded-md relative p-8 ${darkMode?"bg-gray-900":"bg-blue"}`}>
-        <ul className="flex absolute top-2 right-2 z-40" >
+      <div className={`w-full h-full rounded-md relative ${darkMode?"bg-gray-900":"bg-blue"}`}>
+        <ul className="flex absolute top-2 left-20 z-40 text-xs md:text-sm xl:text-sm" >
             {Object.keys(chartConfig).map((item)=>{
                 return <li key={item}>
                     <ChartFilter text={item} active={filter===item} onClick={()=>{

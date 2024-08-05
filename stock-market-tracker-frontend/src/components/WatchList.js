@@ -28,12 +28,12 @@ const WatchList = () => {
   return (
     <>
     <div
-      className={`w-full h-full rounded-md relative p-8 border-2 custom-scrollbar ${
+      className={`w-full h-full rounded-md relative p-8 border-2 custom-scrollbar shadow-md ${
         darkMode ? "bg-gray-900 border-gray-800" : "bg-white border-neutral-200"
       } `}
-      style={{ border: "1px solid lightgray", color: "gray", overflow: "auto" }}
+      style={{color: "gray", overflow: "auto" }}
       >
-      <h1 className="fs-4" style={{padding:"10px"}} >Previous Stock Searches</h1>
+      <h1 className="text-lg xl:text-2xl" style={{padding:"10px"}} >Previous Stock Searches</h1>
       <ul
         className={`w-full h-full flex flex-col justify-between divide-y-1 ${
           darkMode ? "divide-gray-800" : null
