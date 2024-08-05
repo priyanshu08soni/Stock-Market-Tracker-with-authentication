@@ -30,15 +30,15 @@ const Search = () => {
           ? "bg-gray-900 border-gray-800"
           : " bg-white border-blue-100"
       }`}
-      style={{height:"50px",width:"35vw"}}
+      style={{height:"10px",width:"69vh"}}
     >
       <input
         type="text"
         value={input}
         className={`w-full px-4 py-2 focus:outline-none rounded-md ${
-          darkMode ? "bg-gray-900" : null
+          darkMode ? "bg-gray-700" : null
         }`}
-        placeholder="Search stock ..."
+        placeholder="Search stock ... and press enter"
         onChange={(e) => {
           setInput(e.target.value);
         }}
@@ -50,15 +50,10 @@ const Search = () => {
       />
       {input && (
         <button onClick={clear}>
-          <XIcon className="h-4 w-4 m-1 fill-gray-500" />
+          <XIcon className="h-7 w-7 m-1 fill-gray-500" />
         </button>
       )}
-      <button
-        onClick={updateBestMatches}
-        className="h-8 w-8 bg-indigo-600 rounded-md flex justify-content-center align-items-center m-1 p-2  "
-      >
-        <SearchIcon className="fill-gray-100" />
-      </button>
+      
       {input && bestMatches.length > 0 ? (
         <SearchResult results={bestMatches} />
       ) : null}

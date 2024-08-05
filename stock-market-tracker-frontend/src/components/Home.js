@@ -62,15 +62,11 @@ const Home = () => {
   },[authState,config2]);
   return (
     <div
-      className={`h-screen grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-6 px-10 pb-10 font-roboto ${
+      className={`h-screen grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-10 px-10 pb-10 font-roboto ${
         darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-100"
       } `}
     >
-      <div>
-        <div className="my-1 font-roboto">
-          <b>{authState?.email}</b>
-        </div>
-      </div>
+      
       <div className="col-span-1 md:col-span-2 xl:col-span-3 row-span-2">
         <Header name={stockDetails?.name} />
       </div>
