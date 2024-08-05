@@ -13,7 +13,7 @@ const ThemeIcon = () => {
   return (
     <>
     <button className={`d-flex gap-3 rounded-lg border-2
-    mt-3 p-2 absolute top-0 right-10  shadow-lg ${darkMode? "shadow-gray-600" :null}`} 
+     ${darkMode? "shadow-gray-600" :null}`} 
     onClick={toggleDarkMode}
     >
       <MoonIcon className={`h-6 w-6 cursor-pointer stroke-1 fill-none ${darkMode? "fill-yellow-400 stroke-yellow-400":"fill-none stroke-neutral-500 "}`} />

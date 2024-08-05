@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-import Chart from "./Chart";
-import Header from "./Header";
-import Details from "./Details";
-import Overview from "./Overview";
+import Chart from "../components/Chart";
+import Header from "../components/Header";
+import Details from "../components/Details";
+import Overview from "../components/Overview";
 import ThemeContext from "../context/ThemeContext";
 import StockContext from "../context/StockContext";
 import { fetchQuote, fetchStockDetails } from "../api/stock-api";
 import {  useDispatch, useSelector } from "react-redux";
+import { MdOutlineLeaderboard } from "react-icons/md";
 
-import WatchList from "./WatchList";
+import ThemeIcon from  "../components/ThemeIcon"
+import WatchList from "../components/WatchList";
 import { getWatchList } from "../features/watchlist/watchListSlice";
+import { NavLink } from "react-router-dom";
 
 
 const Home = () => {
@@ -61,6 +64,16 @@ const Home = () => {
     }
   },[authState,config2]);
   return (
+    <>
+    <nav className={`pt-4 pb-4 flex ${ darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-50"
+      }`}>
+        <div className="logo flex items-center w-50"><MdOutlineLeaderboard  /></div>
+        <div className="flex items-center justify-end pr-10 gap-10 w-50">
+            <NavLink className="navlink" to="/" >Home</NavLink>
+            <NavLink className="navlink" to="/leaderboard">Leaderboard</NavLink>
+            <ThemeIcon />
+        </div>
+    </nav>
     <div
       className={`h-screen  custom-scrollbar grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 grid-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-10 px-10 pb-10 font-roboto ${
         darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-50"
@@ -88,6 +101,7 @@ const Home = () => {
         <WatchList/>
       </div>
     </div>
+    </>
   );
 };
 
