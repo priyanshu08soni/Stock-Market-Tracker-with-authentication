@@ -14,7 +14,7 @@ dbConnect();
 app.use(morgan("dev"));
 app.use(cors());
 //generating response to request
-app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
