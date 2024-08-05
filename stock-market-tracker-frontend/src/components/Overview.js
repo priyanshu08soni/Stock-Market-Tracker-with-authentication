@@ -4,8 +4,8 @@ import ThemeContext from "../context/ThemeContext";
 const Overview = ({symbol, price, change, changePercent, currency}) => {
   const {darkMode}=useContext(ThemeContext);
   return (
-    <div className={`w-full h-full rounded-md relative p-8 border-2 bg-gray-300 ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-neutral-200"}`}
-    style={{border:"1px solid lightgray", color:"gray",overflow:"auto"}}
+    <div className={`w-full h-full rounded-md relative p-8 border-2 bg-gray-300 ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-blue-100"}`}
+    style={{ color:"gray",overflow:"auto"}}
     >
       <span className="absolute left-4 top-4 text-neutral-400 text-lg xl:text-lg 2xl:text-xl" >{symbol}</span>
       <div className="w-full h-full flex items-center justify-around" >
