@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use('/',authRouter);
-//after the authentication
+//after the authentication hello
 
 app.use(notFound);
 app.use(errorHandler); 
