@@ -27,9 +27,18 @@ function App() {
               </ThemeContext.Provider>
             }
           />
+          <Route
+            path="/leaderboard"
+            element={
+              <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
+                <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
+                  <Leaderboard />
+                </StockContext.Provider>
+              </ThemeContext.Provider>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </BrowserRouter>
     </>

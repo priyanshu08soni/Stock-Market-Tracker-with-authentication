@@ -8,7 +8,6 @@ const ThemeIcon = () => {
     setDarkMode(!darkMode);
    }
    const authState = useSelector((state) => state?.auth?.user);
-   console.log(authState);
    const firstLetter = authState?.firstname.charAt(0).toUpperCase();
   return (
     <>

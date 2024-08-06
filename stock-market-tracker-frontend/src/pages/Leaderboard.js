@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdOutlineLeaderboard } from "react-icons/md";
 import { CgDetailsLess } from "react-icons/cg";
 import { AiOutlineRise } from "react-icons/ai";
 import { CiSearch } from "react-icons/ci";
 import { NavLink } from "react-router-dom";
 import ThemeIcon from "../components/ThemeIcon";
+import ThemeContext from "../context/ThemeContext";
 const Leaderboard = () => {
+  const { darkMode } = useContext(ThemeContext);
   return (
     <>
-    <nav className="pt-4 pb-4 flex"
-        style={{backgroundColor: "#fff3f3"}}
+    <nav className={`pt-4 pb-4 flex ${ darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-50"
+      }`}
     >
         <div className="logo flex items-center w-25"><MdOutlineLeaderboard  /></div>
         <div className="flex items-center justify-end pr-16 gap-10 w-75">
             <NavLink className="navlink" to="/" >Home</NavLink>
             <NavLink className="navlink" to="/leaderboard">Leaderboard</NavLink>
+            <ThemeIcon />
         </div>
     </nav>
-      <div>
+      <div className={`font-roboto ${
+        darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-50"
+      } `}>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gird-rows-8 md:grid-rows-7 xl:grid-rows-5 auto-rows-fr gap-6 p-10 font-roboto">
           <div className="md:col-span-2 xl:col-span-1">
             <div className="flex items-center justify-center">
@@ -200,7 +205,8 @@ const Leaderboard = () => {
                 Details
               </div>
             </div>
-            <div className="flex gap-5 mt-4">
+            <div className={`flex gap-5 mt-4 bg-gray-300 shadow-md rounded-md ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-blue-100"}`}
+              style={{ color:"gray",overflow:"auto",borderRadius: "20px",}}>
               <div
                 className={`w-full h-full flex justify-between text-3xl relative p-8`}
                 style={{
@@ -218,7 +224,8 @@ const Leaderboard = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5 mt-4">
+            <div className={`flex gap-5 mt-4 bg-gray-300 shadow-md rounded-md ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-blue-100"}`}
+              style={{ color:"gray",overflow:"auto",borderRadius: "20px",}}>
               <div
                 className={`w-full h-full flex items-center justify-between relative p-8`}
                 style={{
@@ -242,7 +249,8 @@ const Leaderboard = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5 mt-4">
+            <div className={`flex gap-5 mt-4 bg-gray-300 shadow-md rounded-md ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-blue-100"}`}
+              style={{ color:"gray",overflow:"auto",borderRadius: "20px",}}>
               <div
                 className={`w-full h-full flex items-center justify-between relative p-8`}
                 style={{
