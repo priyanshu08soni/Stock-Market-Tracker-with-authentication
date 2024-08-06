@@ -274,7 +274,8 @@ const Leaderboard = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5 mt-4">
+            <div className={`flex gap-5 mt-4 bg-gray-300 shadow-md rounded-md ${darkMode?"bg-gray-900 border-gray-800":"bg-white border-blue-100"}`}
+              style={{ color:"gray",overflow:"auto",borderRadius: "20px",}}>
               <div
                 className={`w-full h-full flex items-center justify-between relative p-8 border-2`}
                 style={{
