@@ -70,7 +70,6 @@ const Home = () => {
         <div className="logo flex items-center w-50"><MdOutlineLeaderboard  /></div>
         <div className="flex items-center justify-end pr-10 gap-10 w-50">
             <NavLink className="navlink" to="/" >Home</NavLink>
-            <NavLink className="navlink" to="/leaderboard">Leaderboard</NavLink>
             <ThemeIcon />
         </div>
     </nav>
