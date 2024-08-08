@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Search from "./Search";
 import ThemeContext from "../context/ThemeContext";
-import img from  "../assets/Stock-icon.png";
 const Header = ({ name }) => {
   const { darkMode } = useContext(ThemeContext);
   return (

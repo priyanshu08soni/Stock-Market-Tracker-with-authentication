@@ -16,14 +16,14 @@ import { NavLink } from "react-router-dom";
 
 
 const Home = () => {
-  const getTokenFromLocalStorage=localStorage.getItem("user")
-  ? JSON.parse(localStorage.getItem("user")):null;
-  const config2={
-    headers:{
-      Authorization: `Bearer ${getTokenFromLocalStorage!==null?getTokenFromLocalStorage.token:""}`
-    },
-    Accept:"application/json"
-  };
+  // const getTokenFromLocalStorage=localStorage.getItem("user")
+  // ? JSON.parse(localStorage.getItem("user")):null;
+  // const config2={
+  //   headers:{
+  //     Authorization: `Bearer ${getTokenFromLocalStorage!==null?getTokenFromLocalStorage.token:""}`
+  //   },
+  //   Accept:"application/json"
+  // };
   const { darkMode } = useContext(ThemeContext);
   const dispatch=useDispatch();
   
@@ -33,7 +33,7 @@ const Home = () => {
   const authState = useSelector((state) => state?.auth?.user);
   
   useEffect(() => {
-    if(authState!==null){
+    if(stockSymbol!==null){
       const updateStockDetails = async () => {
         try {
           const result = await fetchStockDetails(stockSymbol);
@@ -57,12 +57,12 @@ const Home = () => {
       setStockDetails({});
       setQuote({})
     }
-  }, [authState,stockSymbol]);
-  useEffect(()=>{
-    if(authState!==null){
-      dispatch(getWatchList(config2));
-    }
-  },[authState,config2]);
+  }, [stockSymbol]);
+  // useEffect(()=>{
+  //   if(authState!==null){
+  //     dispatch(getWatchList(config2));
+  //   }
+  // },[authState,config2]);
   return (
     <>
     <nav className={`pt-4 pb-4 flex ${ darkMode ? "bg-gray-900 text-gray-300" : " bg-blue-50"

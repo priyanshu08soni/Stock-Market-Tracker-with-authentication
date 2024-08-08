@@ -6,7 +6,6 @@ import ThemeContext from "./context/ThemeContext";
 import StockContext from "./context/StockContext";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Leaderboard from "./pages/Leaderboard";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [stockSymbol, setStockSymbol] = useState("FB");
@@ -23,16 +22,6 @@ function App() {
               <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
                 <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
                   <Home />
-                </StockContext.Provider>
-              </ThemeContext.Provider>
-            }
-          />
-          <Route
-            path="/leaderboard"
-            element={
-              <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-                <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
-                  <Leaderboard />
                 </StockContext.Provider>
               </ThemeContext.Provider>
             }
