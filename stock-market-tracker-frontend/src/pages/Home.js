@@ -10,8 +10,6 @@ import {  useDispatch, useSelector } from "react-redux";
 import { MdOutlineLeaderboard } from "react-icons/md";
 
 import ThemeIcon from  "../components/ThemeIcon"
-import WatchList from "../components/WatchList";
-import { getWatchList } from "../features/watchlist/watchListSlice";
 import { NavLink } from "react-router-dom";
 
 
@@ -95,9 +93,6 @@ const Home = () => {
       </div>
       <div className="col-span-2 xl:col-span-1 row-span-2 xl:row-span-4">
         <Details details={stockDetails} />
-      </div>
-      <div className="col-span-2 md:col-span-2 xl:col-span-3 row-span-2">
-        <WatchList/>
       </div>
     </div>
     </>
